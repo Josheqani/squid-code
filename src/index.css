@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-squid: 'Orbitron', system-ui, sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+  --font-display: 'Bebas Neue', cursive;
+  --color-squid-pink: #ff007a;
+  --color-squid-pink-hover: #ff2a8d;
+  --color-squid-pink-dark: #b80058;
+  --color-squid-teal: #037a4b;
+  --color-squid-teal-glow: #10b981;
+  --color-squid-gold: #f59e0b;
+  --color-squid-caramel: #b45309;
+  --color-squid-dark: #0a0b0e;
+  --color-squid-card: #12141a;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #0b0c10;
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* Custom needle cursor for Dalgona carving */
+.cursor-needle {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M24 4 L6 22 L4 24 L6 20 L20 6 Z' fill='%23e2e8f0' stroke='%23000' stroke-width='1.5'/%3E%3Ccircle cx='23' cy='5' r='1.5' fill='%23ff007a'/%3E%3C/svg%3E") 2 26, crosshair;
+}
+
+/* Subtle CRT Scanline overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Neon Pink Glow Effects */
+.pink-glow {
+  box-shadow: 0 0 25px rgba(255, 0, 122, 0.4), inset 0 0 15px rgba(255, 0, 122, 0.2);
+}
+
+.pink-glow-sm {
+  box-shadow: 0 0 12px rgba(255, 0, 122, 0.35);
+}
+
+.pink-text-glow {
+  text-shadow: 0 0 10px rgba(255, 0, 122, 0.7), 0 0 20px rgba(255, 0, 122, 0.4);
+}
+
+.teal-glow {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.4), inset 0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+.gold-glow {
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.35), inset 0 0 15px rgba(245, 158, 11, 0.2);
+}
+
+/* Keyframes for atmospheric flicker and pulse */
+@keyframes ominous-pulse {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes needle-wiggle {
+  0%, 100% { transform: rotate(-38deg) translateY(-2px) translate(0, 0); }
+  25% { transform: rotate(-37.5deg) translateY(-2px) translate(-0.8px, 0.6px); }
+  75% { transform: rotate(-38.5deg) translateY(-2px) translate(0.6px, -0.6px); }
+}
+
+.animate-ominous {
+  animation: ominous-pulse 4s ease-in-out infinite;
+}
