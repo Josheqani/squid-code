@@ -4,7 +4,7 @@
 
 ### *Round 2: The Sugar Honeycomb QR Extraction Protocol*
 
-[![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white)](https://bun.sh)
+[![pnpm](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)](https://pnpm.io)
 [![React](https://img.shields.io/badge/React-19.2-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
@@ -106,7 +106,7 @@ squid-code/
 │   └── main.jsx                  # React 19 root
 ├── package.json
 ├── vite.config.js                # Vite + Tailwind v4 plugin
-├── bun.lock                      # Bun lockfile
+├── pnpm-lock.yaml                # pnpm lockfile
 └── README.md
 ```
 
@@ -116,7 +116,7 @@ squid-code/
 
 | Technology | Role |
 | :--- | :--- |
-| **[Bun](https://bun.sh)** | Ultra-fast JavaScript runtime, package manager, and bundler |
+| **[pnpm](https://pnpm.io)** | Fast, disk space efficient package manager |
 | **[React 19](https://react.dev)** | Modern component architecture & hooks |
 | **[Vite 8](https://vite.dev)** | Next-gen lightning-fast dev server and bundler |
 | **[Tailwind CSS v4](https://tailwindcss.com)** | Modern utility styling with `@theme` and `@import "tailwindcss"` |
@@ -142,12 +142,13 @@ squid-code/
 
 ---
 
-## ⚡ Quickstart with Bun
+## ⚡ Quickstart with pnpm
 
 ### Prerequisites
-Make sure you have [Bun](https://bun.sh) installed (v1.0 or higher):
+Make sure you have [Node.js](https://nodejs.org) (v18 or higher) and [pnpm](https://pnpm.io) installed:
 ```bash
-curl -fsSL https://bun.sh/install | bash
+corepack enable
+corepack prepare pnpm@latest --activate
 ```
 
 ### 1. Clone the Repository
@@ -158,23 +159,23 @@ cd squid-code
 
 ### 2. Install Dependencies
 ```bash
-bun install
+pnpm install
 ```
 
 ### 3. Start Development Server
 ```bash
-bun dev
+pnpm dev
 ```
 Open your browser at `http://localhost:5173`.
 
 ### 4. Build for Production
 ```bash
-bun run build
+pnpm run build
 ```
 
 ### 5. Lint the Codebase
 ```bash
-bun run lint
+pnpm run lint
 ```
 
 ---
